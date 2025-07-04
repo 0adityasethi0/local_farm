@@ -5,10 +5,11 @@ from datetime import date, datetime
 # ---------- DB Connection ----------
 def get_connection():
     return mysql.connector.connect(
-        host="localhost",
+        host="localhost",                    
         user="root",
         password="Aditya@1210",
-        database="farm_db"
+        database="farm_db",
+        auth_plugin='mysql_native_password'
     )
 
 st.set_page_config(page_title="Farm Log Entry", layout="wide")
